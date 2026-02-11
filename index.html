@@ -8,71 +8,67 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    overflow-x: hidden;
-    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
-    color: white;
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:white;
 }
 
-.page {
-    display: none;
-    padding: 60px 20px 120px;
-    min-height: 100vh;
-    animation: fade 0.8s ease-in-out;
+.page{
+    display:none;
+    padding:50px 20px 100px;
+    min-height:100vh;
+    animation:fade 0.8s ease-in-out;
 }
 
-.active {
-    display: block;
+.active{display:block;}
+
+h1{
+    font-family:'Pacifico',cursive;
+    font-size:34px;
+    text-shadow:0 0 20px rgba(255,0,120,0.8);
 }
 
-h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 36px;
-    text-shadow: 0 0 20px rgba(255,0,120,0.8);
+button{
+    padding:12px 28px;
+    font-size:18px;
+    border-radius:30px;
+    border:none;
+    margin:15px 15px;
+    cursor:pointer;
+    background:white;
+    color:#ff4d6d;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-button {
-    padding: 12px 30px;
-    font-size: 18px;
-    border-radius: 30px;
-    border: none;
-    margin: 20px 10px;
-    cursor: pointer;
-    background: white;
-    color: #ff4d6d;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+button:hover{transform:scale(1.1);}
+
+img{
+    width:260px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-button:hover {
-    transform: scale(1.1);
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
 }
 
-.food-img, .gif-img {
-    width: 280px;
-    border-radius: 20px;
-    margin: 20px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+@keyframes fall{
+    0%{transform:translateY(-100px);opacity:1;}
+    100%{transform:translateY(100vh);opacity:0;}
 }
 
-@keyframes fade {
-    from {opacity:0;}
-    to {opacity:1;}
-}
-
-@keyframes fall {
-    0% { transform: translateY(-100px); opacity: 1; }
-    100% { transform: translateY(100vh); opacity: 0; }
-}
-
-.falling {
-    position: fixed;
-    top: -50px;
-    font-size: 24px;
-    animation: fall 6s linear infinite;
+.falling{
+    position:fixed;
+    top:-50px;
+    font-size:22px;
+    animation:fall 6s linear infinite;
 }
 </style>
 </head>
@@ -82,7 +78,7 @@ button:hover {
 <!-- PAGE 1 -->
 <div class="page active" id="page1">
 <h1>Hi Disha 💕</h1>
-<img src="https://giphy.com/embed/ifBColYSQBYy99Dldd" class="gif-img">
+<img src="https://media.giphy.com/media/ifBColYSQBYy99Dldd/giphy.gif">
 <h1>Will you please be my Valentines 🥺👉👈?</h1>
 <button onclick="nextPage('page2')">Yes 💖</button>
 <button onclick="moveNo(this)">No 😜</button>
@@ -91,7 +87,7 @@ button:hover {
 <!-- PAGE 2 -->
 <div class="page" id="page2">
 <h1>Will you be the dhokli 🌹 to my daal? 😊</h1>
-<img src="https://www.puvi.co/uploaded_images/1687505275.png" class="food-img">
+<img src="https://www.puvi.co/uploaded_images/1687505275.png">
 <br>
 <button onclick="nextPage('page3')">Yes 💖</button>
 <button onclick="moveNo(this)">No 😜</button>
@@ -100,7 +96,7 @@ button:hover {
 <!-- PAGE 3 -->
 <div class="page" id="page3">
 <h1>Will you keep correcting my grammar? 😂💞</h1>
-<img src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUydHQ0MzZuMWZwbHk0ejY1MmdxYXFmbDlnNjYwM3gxOXB3anV5b3ZnNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OJvDJvIGIVx6QSBJhg/giphy.webp" class="gif-img">
+<img src="https://media.giphy.com/media/OJvDJvIGIVx6QSBJhg/giphy.gif">
 <br>
 <button onclick="nextPage('page4')">Yes 💖</button>
 <button onclick="moveNo(this)">No 😜</button>
@@ -119,36 +115,32 @@ Thank you for everything baby 🥺 <br><br>
 I LOVE YOU 😘
 </h1>
 
-<h1 style="margin-top:30px;">Cutulal 💖</h1>
+<h1 style="margin-top:30px;font-size:40px;">Cutulal 💖</h1>
 
-<img src="https://giphy.com/embed/C8OT5MpU70lsjkfwNd" class="gif-img">
+<img src="https://media.giphy.com/media/C8OT5MpU70lsjkfwNd/giphy.gif">
 </div>
 
 <script>
-function nextPage(id) {
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+function nextPage(id){
+    document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
     document.getElementById(id).classList.add("active");
 }
 
-function moveNo(button) {
-    button.style.position = "absolute";
-    button.style.top = Math.random()*70 + "%";
-    button.style.left = Math.random()*70 + "%";
+function moveNo(btn){
+    btn.style.position="absolute";
+    btn.style.top=Math.random()*60+"%";
+    btn.style.left=Math.random()*60+"%";
 }
 
-function createHearts() {
-    const heart = document.createElement("div");
-    heart.classList.add("falling");
-    heart.innerHTML = Math.random() > 0.5 ? "💖" : "🌹";
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 6000);
+function createHearts(){
+    const el=document.createElement("div");
+    el.classList.add("falling");
+    el.innerHTML=Math.random()>0.5?"💖":"🌹";
+    el.style.left=Math.random()*window.innerWidth+"px";
+    document.body.appendChild(el);
+    setTimeout(()=>{el.remove();},6000);
 }
-
-setInterval(createHearts, 500);
+setInterval(createHearts,600);
 </script>
 
 </body>
