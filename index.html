@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Disha 💘</title>
+<title>For Disha 💖</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
@@ -13,13 +13,12 @@ body{
     font-family:'Poppins',sans-serif;
     text-align:center;
     overflow-x:hidden;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
     color:white;
 }
 
 .page{
     display:none;
-    padding:50px 20px 100px;
+    padding:60px 20px 120px;
     min-height:100vh;
     animation:fade 0.8s ease-in-out;
 }
@@ -32,17 +31,23 @@ h1{
     text-shadow:0 0 20px rgba(255,0,120,0.8);
 }
 
+p{
+    font-size:18px;
+    font-weight:600;
+}
+
 button{
-    padding:12px 28px;
+    padding:12px 30px;
     font-size:18px;
     border-radius:30px;
     border:none;
-    margin:15px 15px;
+    margin:15px;
     cursor:pointer;
     background:white;
     color:#ff4d6d;
     font-weight:bold;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
 }
 
 button:hover{transform:scale(1.1);}
@@ -69,6 +74,7 @@ img{
     top:-50px;
     font-size:22px;
     animation:fall 6s linear infinite;
+    pointer-events:none;
 }
 </style>
 </head>
@@ -76,54 +82,76 @@ img{
 <body>
 
 <!-- PAGE 1 -->
-<div class="page active" id="page1">
+<div class="page active" id="page1" style="background:linear-gradient(135deg,#ff9a9e,#fad0c4);">
 <h1>Hi Disha 💕</h1>
 <img src="https://media.giphy.com/media/ifBColYSQBYy99Dldd/giphy.gif">
 <h1>Will you please be my Valentines 🥺👉👈?</h1>
-<button onclick="nextPage('page2')">Yes 💖</button>
+<button onclick="showPage(2)">Yes 💖</button>
 <button onclick="moveNo(this)">No 😜</button>
 </div>
 
 <!-- PAGE 2 -->
-<div class="page" id="page2">
-<h1>Will you be the dhokli 🌹 to my daal? 😊</h1>
-<img src="https://www.puvi.co/uploaded_images/1687505275.png">
+<div class="page" id="page2" style="background:linear-gradient(135deg,#ff758c,#ff7eb3);">
+<h1>
+Also you’ve clicked on yes,<br>
+I knew you would 😁<br>
+Let’s get started,<br>
+Welcome to your website 🥰
+</h1>
+<img src="https://media.giphy.com/media/T70hpBP1L0N7U0jtkq/giphy.gif">
 <br>
-<button onclick="nextPage('page3')">Yes 💖</button>
-<button onclick="moveNo(this)">No 😜</button>
+<button onclick="showPage(3)">Next 💘</button>
 </div>
 
 <!-- PAGE 3 -->
-<div class="page" id="page3">
-<h1>Will you keep correcting my grammar? 😂💞</h1>
+<div class="page" id="page3" style="background:linear-gradient(135deg,#fbc2eb,#a6c1ee);">
+<h1>Will you be the dhokli 🌹 to my daal? 😋</h1>
+<img src="https://www.puvi.co/uploaded_images/1687505275.png">
+<br>
+<button onclick="showPage(4)">Yes 💖</button>
+<button onclick="moveNo(this)">No 😜</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4" style="background:linear-gradient(135deg,#ffecd2,#fcb69f);">
+<h1>Will you be the daal 🧡 to my baati? 😋</h1>
+<img src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/1x1/1x1-dal-baati-churma.jpg">
+<br>
+<button onclick="showPage(5)">Yes 💖</button>
+<button onclick="moveNo(this)">No 😜</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="page5" style="background:linear-gradient(135deg,#ff9a9e,#fecfef);">
+<h1>Will you keep correcting my grammar? 😹</h1>
 <img src="https://media.giphy.com/media/OJvDJvIGIVx6QSBJhg/giphy.gif">
 <br>
-<button onclick="nextPage('page4')">Yes 💖</button>
+<button onclick="showPage(6)">Yes 💖</button>
 <button onclick="moveNo(this)">No 😜</button>
 </div>
 
 <!-- FINAL PAGE -->
-<div class="page" id="page4">
+<div class="page" id="page6" style="background:linear-gradient(135deg,#f093fb,#f5576c);">
 <h1>Hahaa my lifetime grammar teacher unlocked 😼💕</h1>
 
-<h1>
+<p>
 Happy Valentine’s Day Dishu baby 🌹❤️ <br><br>
 my loving girlfriend 💕 <br><br>
-You’re the cutest, the prettiest, the most beautiful soul and the best person I’ve ever met. <br><br>
-You complete me like you’re the nom to my nom 😋❤️ <br><br>
-Thank you for everything baby 🥺 <br><br>
-I LOVE YOU 😘
-</h1>
+You’re the cutest, the prettiest, the most beautiful soul and the best person I’ve ever met.<br><br>
+You complete me like you’re the nom to my nom 😋❤️<br><br>
+Thank you for everything baby 🥺<br><br>
+<strong style="font-size:26px;">I LOVE YOU 😘</strong>
+</p>
 
-<h1 style="margin-top:30px;font-size:40px;">Cutulal 💖</h1>
+<h1 style="margin-top:30px;">~Cutulal 🤓</h1>
 
 <img src="https://media.giphy.com/media/C8OT5MpU70lsjkfwNd/giphy.gif">
 </div>
 
 <script>
-function nextPage(id){
+function showPage(number){
     document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
+    document.getElementById("page"+number).classList.add("active");
 }
 
 function moveNo(btn){
@@ -138,9 +166,9 @@ function createHearts(){
     el.innerHTML=Math.random()>0.5?"💖":"🌹";
     el.style.left=Math.random()*window.innerWidth+"px";
     document.body.appendChild(el);
-    setTimeout(()=>{el.remove();},6000);
+    setTimeout(()=>el.remove(),6000);
 }
-setInterval(createHearts,600);
+setInterval(createHearts,700);
 </script>
 
 </body>
