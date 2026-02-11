@@ -1,182 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>For Disha 💘</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Disha 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #ff4d6d);
-    overflow: hidden;
-    text-align: center;
-    color: white;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  text-align: center;
+  transition: background 1s ease;
 }
 
 .page {
-    display: none;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
+  display: none;
+  height: 100vh;
+  padding: 40px;
+  animation: fade 1s ease;
 }
 
 .active {
-    display: flex;
+  display: block;
+}
+
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 15px #ff4da6;
+}
+
+p {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 button {
-    padding: 12px 25px;
-    margin: 10px;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 12px 25px;
+  margin: 15px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  background: white;
+  color: #ff4d88;
+  transition: 0.3s;
 }
 
-.yes {
-    background: white;
-    color: #ff4d6d;
+button:hover {
+  transform: scale(1.15);
 }
 
-.no {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    position: relative;
+img {
+  width: 220px;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
-.cat {
-    font-size: 80px;
-    animation: wave 1.2s infinite;
+.no-btn {
+  position: relative;
 }
 
-@keyframes wave {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(10deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-10deg); }
-    100% { transform: rotate(0deg); }
+@keyframes fade {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
-.hearts {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
+/* Floating hearts */
 .heart {
-    position: absolute;
-    color: white;
-    animation: float 5s linear infinite;
+  position: absolute;
+  bottom: 0;
+  animation: floatUp 6s linear infinite;
+  font-size: 22px;
 }
 
-@keyframes float {
-    from { transform: translateY(100vh); opacity: 1; }
-    to { transform: translateY(-10vh); opacity: 0; }
+@keyframes floatUp {
+  to {transform: translateY(-110vh);}
 }
 
-.final-message {
-    font-size: 20px;
-    max-width: 500px;
-    line-height: 1.6;
+/* Falling roses */
+.rose {
+  position: absolute;
+  top: -50px;
+  animation: fall 8s linear infinite;
 }
+
+@keyframes fall {
+  to {transform: translateY(110vh);}
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="hearts"></div>
-
 <!-- PAGE 1 -->
-<div class="page active" id="page1">
-    <div class="cat">🐱👋</div>
-    <h1>Hii Disha 💕</h1>
-    <p>Will you please be my Valentine 🥺👉🏻👈🏻?</p>
-    <div>
-        <button class="yes" onclick="nextPage(2)">Yes 🥰</button>
-        <button class="no" onmouseover="moveNo(this)">No 😼</button>
-    </div>
+<div id="page1" class="page active" style="background: linear-gradient(135deg,#ff9a9e,#fad0c4);">
+  <h1>Hi Disha 💕</h1>
+  <img src="https://media.giphy.com/media/ifBColYSQBYy99Dldd/giphy.gif">
+  <h2>Will you please be my Valentines 🥺👉🏻👈🏻?</h2>
+  <button onclick="nextPage('page2')">Yes</button>
+  <button class="no-btn" onmouseover="moveNo(this)">No</button>
 </div>
 
 <!-- PAGE 2 -->
-<div class="page" id="page2">
-    <h1>You’ve clicked on yes, I knew you would 😌</h1>
-    <button class="yes" onclick="nextPage(3)">Next 💘</button>
+<div id="page2" class="page" style="background: linear-gradient(135deg,#ff758c,#ff7eb3);">
+  <h2>
+  Also you’ve clicked on yes, <br>
+  I knew you would 😁 <br>
+  Let’s get started, <br>
+  Welcome to your website 🥰
+  </h2>
+  <img src="https://media.giphy.com/media/T70hpBP1L0N7U0jtkq/giphy.gif">
+  <br>
+  <button onclick="nextPage('page3')">Next 💘</button>
 </div>
 
 <!-- PAGE 3 -->
-<div class="page" id="page3">
-    <h1>Will you be the dhokli to my daal? 🥹</h1>
-    <button class="yes" onclick="nextPage(4)">Yes 💞</button>
-    <button class="no" onmouseover="moveNo(this)">No 😼</button>
+<div id="page3" class="page" style="background: linear-gradient(135deg,#fbc2eb,#a6c1ee);">
+  <h2>Will you be the dhokli to my daal? 😋</h2>
+  <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/dal-dhokli-1.jpg">
+  <br>
+  <button onclick="nextPage('page4')">Yes</button>
+  <button class="no-btn" onmouseover="moveNo(this)">No</button>
 </div>
 
 <!-- PAGE 4 -->
-<div class="page" id="page4">
-    <h1>Will you be the daal to my baati? 😋</h1>
-    <button class="yes" onclick="nextPage(5)">Yes 💖</button>
-    <button class="no" onmouseover="moveNo(this)">No 😼</button>
+<div id="page4" class="page" style="background: linear-gradient(135deg,#ffecd2,#fcb69f);">
+  <h2>Will you be the daal to my baati? 😋</h2>
+  <img src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/1x1/1x1-dal-baati-churma.jpg">
+  <br>
+  <button onclick="nextPage('page5')">Yes</button>
+  <button class="no-btn" onmouseover="moveNo(this)">No</button>
 </div>
 
 <!-- PAGE 5 -->
-<div class="page" id="page5">
-    <h1>Will you keep correcting my grammar? 😹</h1>
-    <button class="yes" onclick="grammarYes()">Yes 😂</button>
-    <button class="no" onmouseover="moveNo(this)">No 😼</button>
+<div id="page5" class="page" style="background: linear-gradient(135deg,#ff9a9e,#fecfef);">
+  <h2>Will you keep correcting my grammar? 😹</h2>
+  <button onclick="grammarYes()">Yes</button>
+  <button class="no-btn" onmouseover="moveNo(this)">No</button>
 </div>
 
 <!-- FINAL PAGE -->
-<div class="page" id="finalPage">
-    <div class="cat">🐱💃🐱</div>
-    <div class="final-message">
-        <p>Hahaa my lifetime grammar teacher unlocked 😼</p>
-        <p>
-        Happy Valentine’s Day Dishu baby 🌹♥️<br>
-        my loving girlfriend<br><br>
-        You’re the cutest, the prettiest, the most beautiful soul and the best person I’ve ever met. 
-        You complete me like you’re the nom to my nom 😋.<br><br>
-        Thank you for everything baby 🥹.<br><br>
-        <strong>I LOVE YOU 😚.</strong><br><br>
-        ~ cutulal 🤓
-        </p>
-    </div>
+<div id="finalPage" class="page" style="background: linear-gradient(135deg,#f093fb,#f5576c);">
+  <h2>Happy Valentine’s Day Dishu baby 🌹♥️</h2>
+  <p>
+  my loving girlfriend 💖 <br><br>
+  You’re the cutest, the prettiest, the most beautiful soul and the best person I’ve ever met. <br>
+  You complete me like you’re the nom to my nom 😋. <br><br>
+  Thank you for everything baby 🥹. <br><br>
+  <strong style="font-size:24px;">I LOVE YOU 😚</strong><br><br>
+  <span style="font-family:'Pacifico'; font-size:26px;">~cutulal🤓</span>
+  </p>
+
+  <img src="https://media.giphy.com/media/C8OT5MpU70lsjkfwNd/giphy.gif">
 </div>
 
 <script>
-function nextPage(pageNumber) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page' + pageNumber).classList.add('active');
+
+function nextPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 }
 
-function grammarYes() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('finalPage').classList.add('active');
+function grammarYes(){
+  alert("Hahaa my lifetime grammar teacher unlocked 😼💕");
+  nextPage('finalPage');
 }
 
-function moveNo(button) {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 50);
-    button.style.position = "absolute";
-    button.style.left = x + "px";
-    button.style.top = y + "px";
+function moveNo(btn){
+  const x = Math.random()*(window.innerWidth-100);
+  const y = Math.random()*(window.innerHeight-50);
+  btn.style.position="absolute";
+  btn.style.left=x+"px";
+  btn.style.top=y+"px";
 }
 
-// floating hearts
-setInterval(() => {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 15 + "px";
-    document.querySelector(".hearts").appendChild(heart);
-    setTimeout(() => heart.remove(), 5000);
-}, 500);
+/* hearts */
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*window.innerWidth+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},700);
+
+/* roses */
+setInterval(()=>{
+  const rose=document.createElement("div");
+  rose.className="rose";
+  rose.innerHTML="🌹";
+  rose.style.left=Math.random()*window.innerWidth+"px";
+  document.body.appendChild(rose);
+  setTimeout(()=>rose.remove(),8000);
+},1200);
+
 </script>
 
 </body>
